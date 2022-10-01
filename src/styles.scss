@@ -1,2 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
-@import "./../projects/gm-github-user-widget/src/lib/assets/styles.css";
+// En desarrollo
+// @import "./../projects/gm-github-user-widget/src/lib/assets/styles.css";
+
+// Importando la libreria compilada
+@import "./../dist/gm-github-user-widget/lib/assets/styles.css";
