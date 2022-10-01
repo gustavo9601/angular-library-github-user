@@ -7,4 +7,5 @@ export * from './lib/interfaces/usuario.interface';
 export * from './lib/componentes/usuarios/usuarios.component';
 export * from './lib/componentes/buscador-usuario/buscador-usuario.component';
 export * from './lib/componentes/usuario-color/usuario-color.component';
+export * from './lib/colores/colores.module';
 

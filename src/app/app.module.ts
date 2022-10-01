@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 
 // Libreria compilada
 import {GmGithubUserWidgetModule} from "gm-github-user-widget";
+import {RouteRoutingModule} from "./route-routing.module";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {GmGithubUserWidgetModule} from "gm-github-user-widget";
   ],
   imports: [
     BrowserModule,
-    GmGithubUserWidgetModule
+    GmGithubUserWidgetModule,
+    RouteRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
