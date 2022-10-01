@@ -4,7 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 const routes: Routes = [
   {
     path: 'colores',
-    loadChildren: () => import('./../../projects/gm-github-user-widget/src/lib/colores/colores.module').then(m => m.ColoresModule)
+    loadChildren: () => import('./modules/wrapper-colores/wrapper-colores.module').then(m => m.WrapperColoresModule)
   },
   {
     path: '**',
