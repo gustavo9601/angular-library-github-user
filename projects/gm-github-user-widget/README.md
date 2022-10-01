@@ -1,24 +1,51 @@
-# GmGithubUserWidget
+# Librería Github User Widget
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+Muestra la información de un usuario de Github haciendo uso de la librería de la API. La librería está desarrollada en Angular.
 
-## Code scaffolding
+## Instrucciones
 
-Run `ng generate component component-name --project gmGithubUserWidget` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project gmGithubUserWidget`.
-> Note: Don't forget to add `--project gmGithubUserWidget` or else it will be added to the default project in your `angular.json` file. 
+Hay que seguir las siguientes instrucciones para un correcto uso de la librería
 
-## Build
+### Instalación
 
-Run `ng build gmGithubUserWidget` to build the project. The build artifacts will be stored in the `dist/` directory.
+```npm install gm-github-user-widget```
 
-## Publishing
+### Configuración
 
-After building your library with `ng build gmGithubUserWidget`, go to the dist folder `cd dist/gm-github-user-widget` and run `npm publish`.
+En el app.module.ts (por defecto) tenemos que importar el módulo de la librería **"GithubUserWidgetModule"**
 
-## Running unit tests
+```
+import {GmGithubUserWidgetModule} from "../../projects/gm-github-user-widget/src/lib/gm-github-user-widget.module"
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-Run `ng test gmGithubUserWidget` to execute the unit tests via [Karma](https://karma-runner.github.io).
+import { AppComponent } from './app.component';
 
-## Further help
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    GmGithubUserWidgetModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+### Añadir estilos
+En src/styles de la app principal importamos
+```
+@import './../node_modules/github-user-widget/lib/assets/styles/styles.css';
+```
+### Uso
+* Con buscador
+```
+<gmGUW-buscador-usuario></gmGUW-buscador-usuario>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* Sin buscador
+```
+<gmGUW-usuarios></gmGUW-usuarios>
+```

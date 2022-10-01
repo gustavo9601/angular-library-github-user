@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build.github.lib.linux": "ng build gmGithubUserWidget && cp -R ./projects/gm-github-user-widget/src/lib/assets ./dist/gm-github-user-widget/lib",
+    "build.github.lib.windows": "ng build gmGithubUserWidget",
+    "copy.assets": "copy -r ./projects/gm-github-user-widget/src/lib/assets ./dist/gm-github-user-widget/lib"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +21,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "proyecto-1b-api-github": "^1.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
