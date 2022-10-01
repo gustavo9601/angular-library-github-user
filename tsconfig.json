@@ -7,6 +7,12 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
+    "paths": {
+      "gm-github-user-widget": [
+        "dist/gm-github-user-widget/gm-github-user-widget",
+        "dist/gm-github-user-widget"
+      ]
+    },
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
