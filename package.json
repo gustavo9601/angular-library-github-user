@@ -8,8 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build.github.lib.linux": "ng build gmGithubUserWidget && cp -R ./projects/gm-github-user-widget/src/lib/assets ./dist/gm-github-user-widget/lib",
-    "build.github.lib.windows": "ng build gmGithubUserWidget",
-    "copy.assets": "copy -r ./projects/gm-github-user-widget/src/lib/assets ./dist/gm-github-user-widget/lib"
+    "build.github.lib.windows": "ng build gmGithubUserWidget && @powershell copy -r './projects/gm-github-user-widget/src/lib/assets' './dist/gm-github-user-widget/lib'",
+    "copy.shell":  "@powershell copy './package.json' './dist'"
   },
   "private": true,
   "dependencies": {
